@@ -4,10 +4,16 @@
 #include<stdio.h>
 #include<stdint.h>
 
+// reading data on const uint8_t pointer 
+// bytes -> uint8_t, uint16_t, uint32_t 
+
 uint8_t unpack_u8(const uint8_t **);
 uint16_t unpack_u16(const uint8_t **);
 uint32_t unpack_u32(const uint8_t **);
+
+// read a defined len of bytes
 uint8_t *unpack_bytes(const uint8_t **, size_t, uint8_t *);
+// unpack string prefixed by its length as a uin16 value
 uint16_t unpack_string16(uint8_t **buf, uint8_t **dest);
 
 //writing data on const uint8_t pointer 
